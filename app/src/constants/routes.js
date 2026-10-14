@@ -1,0 +1,15 @@
+export const ROUTES = {
+  HOME: "/",
+  LOGIN: "/login",
+  REGISTER: "/register",
+  FORGOT_PASSWORD: "/forgot-password",
+  RESET_PASSWORD: "/reset-password",
+  CALENDAR: "/calendar",
+  COURSES: "/courses",
+  SETTINGS: "/settings",
+  ADMIN: "/admin",
+  ADMIN_LECTURES: "/admin/lectures",
+  ADMIN_COURSES: "/admin/courses",
+  ADMIN_USERS: "/admin/users",
+  LECTURER: "/lecturer",
+};

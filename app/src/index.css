@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* Class-based dark mode: `dark:` utilities only activate under a future .dark
+   toggle on <html>, never automatically from OS prefers-color-scheme. No
+   toggle ships yet — this just keeps dark: classes dormant while we add them
+   incrementally, so they don't leak an unfinished dark theme to OS-dark users. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* NOUN brand colours as CSS custom properties for use outside Tailwind */
+:root {
+  --noun-500: #1a9a5c;
+  --noun-700: #0d5c34;
+  --gold-500: #e8b824;
+}
+
+/* Reset box model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f9fafb; /* gray-50 */
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling  thin on page-level scrollers */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* Utility: hide scrollbar visually, keep scroll functional */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Safe area for PWA on notched phones */
+.safe-top    { padding-top:    env(safe-area-inset-top); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
