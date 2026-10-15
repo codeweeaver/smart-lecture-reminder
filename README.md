@@ -1,6 +1,4 @@
-================================================================
 NOUN SMART LECTURE REMINDER — SUBMISSION DISC
-================================================================
 
 ## WHAT'S ON THIS DISC
 
@@ -50,4 +48,4 @@ push notifications for their Zoom lectures, TMA deadlines, and
 facilitator announcements replacing the manual process of
 checking the eLearn portal every day. Full details, screenshots,
 and architecture are in the project report and documentation/.
-================================================================
+
